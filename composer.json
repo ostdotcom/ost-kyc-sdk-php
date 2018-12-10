@@ -1,0 +1,35 @@
+{
+  "name": "ostdotcom/ost-kyc-sdk-php",
+  "homepage": "https://kyc.ost.com",
+  "description": "The official OST KYC PHP SDK",
+  "keywords": ["ost","simpletoken","sdk","php", "ostkyc"],
+  "type": "library",
+  "license": "MIT",
+  "support": {
+    "forum": "https://help.ost.com/",
+    "issues": "https://github.com/OpenSTFoundation/ost-kyc-sdk-php/issues"
+  },
+  "require": {
+    "php": ">=5.5.0",
+    "guzzlehttp/guzzle": "~6.0"
+  },
+  "require-dev": {
+    "vlucas/phpdotenv": "v2.4.0",
+    "phpunit/phpunit": "^4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Lib\\": "src/Lib/",
+      "OST\\": "src/Services/",
+      "": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\Lib\\": "tests/Lib/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true
+  }
+}
