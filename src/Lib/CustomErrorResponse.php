@@ -53,7 +53,7 @@ class CustomErrorResponse implements JsonSerializable
       return $this->getDefaultErrorMessage();
     }
 
-    if (($this->internalId == "socket_timeout_exception") && empty($this->statusCode)) {
+    if (($this->internalId == "connect_exception") && empty($this->statusCode)) {
       return $this->getTimeoutErrorMessage();
     }
 
@@ -131,8 +131,8 @@ class CustomErrorResponse implements JsonSerializable
   private function getTimeoutErrorMessage()
   {
     return $this->decorateErrorMessage([
-        'code' => 'GATEWAY_TIMEOUT',
-        'internal_id' => 'SDK(SOCKET_TIMEOUT_EXCEPTION)',
+        'code' => 'CONNECT_EXCEPTION',
+        'internal_id' => 'SDK(CONNECT_EXCEPTION)',
         'msg' => '',
         'error_data' => []
     ]);

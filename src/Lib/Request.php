@@ -88,7 +88,7 @@ class Request
         // $onRejected
         function ($reason) {
           if (get_class($reason) == "GuzzleHttp\Exception\ConnectException") {
-            return $this->customGenericErrorResponse('socket_timeout_exception');
+            return $this->customGenericErrorResponse('connect_exception');
           } else {
             return $this->customGenericErrorResponse('g_1');
           }
@@ -129,7 +129,7 @@ class Request
         // $onRejected
         function ($reason) {
           if (get_class($reason) == "GuzzleHttp\Exception\ConnectException") {
-            return $this->customGenericErrorResponse('socket_timeout_exception');
+            return $this->customGenericErrorResponse('connect_exception');
           } else {
             return $this->customGenericErrorResponse('p_1');
           }
