@@ -139,7 +139,7 @@ $nestedparams = array();
 $nestedparams['selfie'] = 'image/jpeg';
 $nestedparams['document_id'] = 'image/jpeg';
 $params['files'] = $nestedparams;
-$response = $userService->get_presigned_url_put($params)->wait();
+$response = $usersKycService->get_presigned_url_put($params)->wait();
 var_dump($response);
 ```
 
@@ -151,7 +151,7 @@ $nestedparams = array();
 $nestedparams['selfie'] = 'image/jpeg';
 $nestedparams['document_id'] = 'image/jpeg';
 $params['files'] = $nestedparams;
-$response1 = $userService->get_presigned_url_post($params)->wait();
+$response1 = $usersKycService->get_presigned_url_post($params)->wait();
 var_dump($response1);
 ```
 

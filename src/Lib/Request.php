@@ -69,7 +69,8 @@ class Request
    */
   public function get($endpoint, array &$arguments = array())
   {
-
+    $a = $arguments["limit"];
+    var_dump(" The limit is : $a\n");
     $argsCopy = $this->copyAndSanitizeArgs($arguments);
 
     // build Path to hit by appending query params and signature
