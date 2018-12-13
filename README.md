@@ -131,6 +131,30 @@ $response = $usersKycService->getList($params)->wait();
 var_dump($response);
 ```
 
+Get presigned urls for put call:
+
+```php
+$params = array();
+$params = array();
+$params['selfie'] = 'image/jpeg';
+$params['document_id'] = 'image/jpeg';
+$params['files'] = $params;
+$response = $userService->get_presigned_url_put($params)->wait();
+var_dump($response);
+```
+
+Get presigned urls for post call:
+
+```php
+$params = array();
+$params = array();
+$params['selfie'] = 'image/jpeg';
+$params['document_id'] = 'image/jpeg';
+$params['files'] = $params;
+$response = $userService->get_presigned_url_post($params)->wait();
+var_dump($response);
+```
+
 ### Users Kyc Detail Module
 
 ```php
