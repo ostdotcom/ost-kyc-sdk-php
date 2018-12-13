@@ -135,10 +135,10 @@ Get presigned urls for put call:
 
 ```php
 $params = array();
-$params = array();
-$params['selfie'] = 'image/jpeg';
-$params['document_id'] = 'image/jpeg';
-$params['files'] = $params;
+$nestedparams = array();
+$nestedparams['selfie'] = 'image/jpeg';
+$nestedparams['document_id'] = 'image/jpeg';
+$params['files'] = $nestedparams;
 $response = $userService->get_presigned_url_put($params)->wait();
 var_dump($response);
 ```
@@ -147,12 +147,12 @@ Get presigned urls for post call:
 
 ```php
 $params = array();
-$params = array();
-$params['selfie'] = 'image/jpeg';
-$params['document_id'] = 'image/jpeg';
-$params['files'] = $params;
-$response = $userService->get_presigned_url_post($params)->wait();
-var_dump($response);
+$nestedparams = array();
+$nestedparams['selfie'] = 'image/jpeg';
+$nestedparams['document_id'] = 'image/jpeg';
+$params['files'] = $nestedparams;
+$response1 = $userService->get_presigned_url_post($params)->wait();
+var_dump($response1);
 ```
 
 ### Users Kyc Detail Module
