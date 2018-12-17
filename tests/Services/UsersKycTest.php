@@ -82,6 +82,60 @@ final class UsersKycTest extends ServiceTestBase
 
   /**
    *
+   * Check Send Approve Email to User
+   *
+   * @test
+   *
+   * @throws Exception
+   */
+  public function emailApprove()
+  {
+    $ostKycSdkObj = $this->instantiateOSTKYCSDKForV2Api();
+    $usersKycService = $ostKycSdkObj->services->usersKyc;
+    $params = array();
+    $params['user_id'] = getenv('USER_ID');
+    $response = $usersKycService->email_approve($params)->wait();
+    $this->isUnprocessableEntity($response);
+  }
+
+  /**
+   *
+   * Check Send Deny Email to User
+   *
+   * @test
+   *
+   * @throws Exception
+   */
+  public function emailDeny()
+  {
+    $ostObj = $this->instantiateOSTKYCSDKForV2Api();
+    $usersKycService = $ostObj->services->usersKyc;
+    $params = array();
+    $params['user_id'] = getenv('USER_ID');
+    $response = $usersKycService->email_deny($params)->wait();
+    $this->isUnprocessableEntity($response);
+  }
+
+  /**
+   *
+   * Check Send Email Report Issue Email to User
+   *
+   * @test
+   *
+   * @throws Exception
+   */
+  public function emailReportIssue()
+  {
+    $ostObj = $this->instantiateOSTKYCSDKForV2Api();
+    $usersKycService = $ostObj->services->usersKyc;
+    $params = array();
+    $params['user_id'] = getenv('USER_ID');
+    $response = $usersKycService->email_report_issue($params)->wait();
+    $this->isUnprocessableEntity($response);
+  }
+
+  /**
+   *
    * Check Users Kyc Get Presigned Url For Put Api
    *
    * @test
