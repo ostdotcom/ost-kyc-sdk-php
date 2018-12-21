@@ -114,6 +114,33 @@ $response = $usersKycService->submit_kyc($params)->wait();
 var_dump($response);
 ```
 
+Send Approve Email to User:
+
+```php
+$params = array();
+$params['user_id'] = "11550";
+$response = $usersKycService->email_approve($params)->wait();
+var_dump($response);
+```
+
+Send Deny Email to User:
+
+```php
+$params = array();
+$params['user_id'] = "11550";
+$response = $usersKycService->email_deny($params)->wait();
+var_dump($response);
+```
+
+Send Report Issue Email to User:
+
+```php
+$params = array();
+$params['user_id'] = "11550";
+$response = $usersKycService->email_report_issue($params)->wait();
+var_dump($response);
+```
+
 get an existing users kyc:
 
 ```php

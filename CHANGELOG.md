@@ -1,3 +1,8 @@
+[OST KYC PHP SDK v2.0.1](https://github.com/OpenSTFoundation/ost-kyc-sdk-php/tree/v2.0.1) December 17 2018
+---
+
+* Implemented API's for kyc email send
+
 [OST KYC PHP SDK v2.0.0](https://github.com/OpenSTFoundation/ost-kyc-sdk-php/tree/v2.0.0) December 7 2018
 ---
 
