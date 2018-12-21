@@ -43,12 +43,12 @@ Initialize the SDK object:
 $params = array();
 $params['apiKey']=API_KEY;
 $params['apiSecret']=API_SECRET;
-$params['apiBaseUrl']='https://kyc.ost.com/';
+$params['apiBaseUrl']='https://kyc.ost.com';
 
 // The config field is optional for $ostKycSdkObj Object
-$nestedparams = new array();
+$nestedparams = array();
 // This is the timeout in seconds for which the socket connection will remain open
-$nestedparams["timeout"] = 15);
+$nestedparams["timeout"] = 15;
 $params["config"] = $nestedparams;
 
 $ostKycSdkObj = new OSTKYCSDK($params);
