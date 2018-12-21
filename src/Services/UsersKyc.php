@@ -41,6 +41,45 @@ class UsersKyc extends Base
   }
 
   /**
+   * Send Approve Email to User
+   *
+   * @param array $params params for send approve email to user
+   *
+   * @return object
+   *
+   */
+  public function email_approve(array $params = array())
+  {
+    return $this->requestObj->post($this->getPrefix() . '/' . $this->getUserId($params) . "/email/approve", $params);
+  }
+
+  /**
+   * Send Deny Email to User
+   *
+   * @param array $params params for send deny email to user
+   *
+   * @return object
+   *
+   */
+  public function email_deny(array $params = array())
+  {
+    return $this->requestObj->post($this->getPrefix() . '/' . $this->getUserId($params). "/email/deny", $params);
+  }
+
+  /**
+   * Send Report Issue Email to User
+   *
+   * @param array $params params for send report issue email to user
+   *
+   * @return object
+   *
+   */
+  public function email_report_issue(array $params = array())
+  {
+    return $this->requestObj->post($this->getPrefix() . '/' . $this->getUserId($params). "/email/report-issue", $params);
+  }
+
+  /**
    * List Users Kyc
    *
    * @param array $params params for fetching users kyc list
