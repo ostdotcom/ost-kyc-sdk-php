@@ -56,7 +56,7 @@ class ServiceTestBase extends TestCase
 
   /**
    *
-   * Is Valid Success Response
+   * Is Valid Faliure Response
    *
    * @param $response
    *
@@ -65,5 +65,19 @@ class ServiceTestBase extends TestCase
   {
     $this->assertArrayHasKey('success', $response);
     $this->assertTrue($response['success'] == false);
+  }
+
+  /**
+   *
+   * Is UnProcessable Entity
+   *
+   * @param $response
+   *
+   */
+  public function isUnprocessableEntity($response)
+  {
+    if ($response['success'] == false) {
+      $this->assertEquals($response['err']['code'], "UNPROCESSABLE_ENTITY");
+    }
   }
 }

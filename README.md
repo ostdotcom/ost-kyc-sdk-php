@@ -1,8 +1,7 @@
 # OST KYC SDK PHP
 The official [OST KYC PHP SDK](https://dev.ost.com/docs/kyc/index.html).
 
-[![Travis](https://travis-ci.org/OpenSTFoundation/ost-kyc-sdk-php.svg?branch=master)](https://travis-ci.org/OpenSTFoundation/ost-kyc-sdk-php)
-[![Gitter: JOIN CHAT](https://img.shields.io/badge/gitter-JOIN%20CHAT-brightgreen.svg)](https://gitter.im/OpenSTFoundation/SimpleToken)
+[![Travis](https://travis-ci.org/ostdotcom/ost-kyc-sdk-php.svg?branch=master)](https://travis-ci.org/ostdotcom/ost-kyc-sdk-php)
 
 ## Requirements
 
@@ -111,6 +110,33 @@ $params['ethereum_address'] = "0xdfbc84ccac430f2c0455c437adf417095d7ad68e";
 $params['postal_code'] = "afawfveav";
 $params['investor_proof_files_path'] = array("2/i/9ff6374909897ca507ba3077ee8587da", "2/i/4872730399670c6d554ab3821d63ebce");
 $response = $usersKycService->submit_kyc($params)->wait();
+var_dump($response);
+```
+
+Send Approve Email to User:
+
+```php
+$params = array();
+$params['user_id'] = "11550";
+$response = $usersKycService->email_approve($params)->wait();
+var_dump($response);
+```
+
+Send Deny Email to User:
+
+```php
+$params = array();
+$params['user_id'] = "11550";
+$response = $usersKycService->email_deny($params)->wait();
+var_dump($response);
+```
+
+Send Report Issue Email to User:
+
+```php
+$params = array();
+$params['user_id'] = "11550";
+$response = $usersKycService->email_report_issue($params)->wait();
 var_dump($response);
 ```
 
