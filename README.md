@@ -1,8 +1,7 @@
 # OST KYC SDK PHP
 The official [OST KYC PHP SDK](https://dev.ost.com/docs/kyc/index.html).
 
-[![Travis](https://travis-ci.org/OpenSTFoundation/ost-kyc-sdk-php.svg?branch=master)](https://travis-ci.org/OpenSTFoundation/ost-kyc-sdk-php)
-[![Gitter: JOIN CHAT](https://img.shields.io/badge/gitter-JOIN%20CHAT-brightgreen.svg)](https://gitter.im/OpenSTFoundation/SimpleToken)
+[![Travis](https://travis-ci.org/ostdotcom/ost-kyc-sdk-php.svg?branch=master)](https://travis-ci.org/ostdotcom/ost-kyc-sdk-php)
 
 ## Requirements
 
