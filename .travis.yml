@@ -18,6 +18,17 @@ php:
   - 7.1
   - 7.2
 before_install:
+  -
+      ver=`php --version | grep "PHP 7." | wc -l`
+      if [ $ver == 1 ]
+      then
+      echo "UPDATING PHPUNIT"
+      composer install phpunit/phpunit '^7'
+      else
+      echo "Using PHP Version Below 7"
+      composer install phpunit/phpunit '^4'
+      fi
+
 install:
 before_script:
   - composer update
