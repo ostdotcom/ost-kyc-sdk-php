@@ -1,3 +1,8 @@
+[OST KYC PHP SDK v2.0.2](https://github.com/ostdotcom/ost-kyc-sdk-php/tree/v2.0.2) february 28 2019
+---
+
+* Repository moved from OpenStFoundation to ostdotcom and related Readme Updated.
+
 [OST KYC PHP SDK v2.0.1](https://github.com/ostdotcom/ost-kyc-sdk-php/tree/v2.0.1) December 17 2018
 ---
 
