@@ -11,7 +11,7 @@ final class UsersKycTest extends ServiceTestBase
    *
    * @throws Exception
    */
-  protected function setUp()
+  protected function setUp(): void
   {
     $this->canCreateInstanceOfOSTKYCSDKForV2Api();
   }
