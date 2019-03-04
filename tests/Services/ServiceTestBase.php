@@ -18,13 +18,13 @@ class ServiceTestBase extends TestCase
    *
    * @throws Exception
    */
-  public function canCreateInstanceOfOSTKYCSDKForV2Api()
-  {
-    $this->assertInstanceOf(
-        OSTKYCSDK::class,
-        $this->instantiateOSTKYCSDKForV2Api()
-    );
-  }
+//  public function canCreateInstanceOfOSTKYCSDKForV2Api()
+//  {
+//    $this->assertInstanceOf(
+//        OSTKYCSDK::class,
+//        $this->instantiateOSTKYCSDKForV2Api()
+//    );
+//  }
 
   /**
    *

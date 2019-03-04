@@ -7,10 +7,12 @@ use PHPUnit\Framework\TestCase;
 
 class CustomErrorResponseTest extends TestCase
 {
+    /*
   protected function setUp(): void
   {
     parent::setUp();
   }
+  */
 
   /**
    * @dataProvider dataProviderCustomErrorResponse

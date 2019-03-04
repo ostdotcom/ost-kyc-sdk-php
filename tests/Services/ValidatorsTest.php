@@ -6,10 +6,10 @@ require_once($filepath."/ServiceTestBase.php");
 final class ValidatorsTest extends ServiceTestBase
 {
 
-  protected function setUp(): void
-  {
-    $this->canCreateInstanceOfOSTKYCSDKForV2Api();
-  }
+//  protected function setUp()
+//  {
+//    $this->canCreateInstanceOfOSTKYCSDKForV2Api();
+//  }
 
   /**
    *
