@@ -7,17 +7,6 @@ final class UsersKycTest extends ServiceTestBase
 {
   /**
    *
-   * override setUp() to load environment variables from .env.example file for non TRAVIS environment
-   *
-   * @throws Exception
-   */
-  protected function setUp()
-  {
-    $this->canCreateInstanceOfOSTKYCSDKForV2Api();
-  }
-
-  /**
-   *
    * Check Users Kyc List Api
    *
    * @test
